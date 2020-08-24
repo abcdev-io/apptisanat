@@ -1,0 +1,8 @@
+header {
+	display: flex;
+	background-color: #999;
+	padding:20px;
+}
+header input{
+	flex:1;
+}

@@ -1,0 +1,8 @@
+article {
+	width:200px;
+	cursor:pointer;
+}
+article h3{
+	text-align:center;
+	margin:0;
+}

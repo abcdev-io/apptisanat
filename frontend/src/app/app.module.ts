@@ -5,20 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListeProduitsComponent } from './pages/liste-produits/liste-produits.component';
 import { ProduitComponent } from './ui/produit/produit.component';
+import { BreadcrumbsComponent } from './ui/breadcrumbs/breadcrumbs.component';
 import { DetailsProduitComponent } from './pages/details-produit/details-produit.component';
+
+
+import { BreadcrumbService } from './services/breadcrumb.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListeProduitsComponent,
     ProduitComponent,
+    BreadcrumbsComponent,
     DetailsProduitComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    BreadcrumbService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

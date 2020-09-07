@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
+
 import {Produit} from '../../models/produit';
+import {ProduitService} from '../../services/produit.service';
+
+
 
 @Component({
   selector: 'app-liste-produits',
@@ -9,17 +14,15 @@ import {Produit} from '../../models/produit';
 export class ListeProduitsComponent implements OnInit {
 
 
-  produits = [
-	  new Produit({"_id":123456,"nom":"Robe Fuschia à frange"}),
-	  new Produit({"_id":654321,"nom":"robe fuschia"}),
-	  new Produit({"_id":123456,"nom":"robe fuschia"}),
-	  new Produit({"_id":123456,"nom":"robe fuschia"}),
-	  new Produit({"_id":123456,"nom":"robe fuschia"}),
-	  new Produit({'_id':123456,'nom':"robe fuschia"})
-  ];
-  constructor() { }
+  produits: Produit[] = [];
+  constructor(
+    private _produitService: ProduitService
+  ) { }
 
   ngOnInit(): void {
+    this._produitService.getProduits().then(returnedProduits => {
+      this.produits = returnedProduits;
+    });
   }
 
 }

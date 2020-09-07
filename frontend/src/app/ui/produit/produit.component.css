@@ -3,6 +3,17 @@ article {
 	cursor:pointer;
 }
 article h3{
-	text-align:center;
+	text-align:left;
 	margin:0;
+	text-transform:capitalize;
+	font-weight: normal;
+}
+img{
+   height:200px;
+   width:200px;
+   background-size:cover;
+}
+
+article .prix{
+	font-weight:bold;
 }

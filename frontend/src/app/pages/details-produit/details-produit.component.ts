@@ -1,6 +1,10 @@
 import { Component, OnInit, Input  } from '@angular/core';
-
 import { ActivatedRoute } from '@angular/router';
+
+
+import {Produit} from '../../models/produit';
+import {ProduitService} from '../../services/produit.service';
+
 
 
 @Component({
@@ -9,15 +13,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./details-produit.component.css']
 })
 export class DetailsProduitComponent implements OnInit {
+  
+  produit: Produit = new Produit();
 
 
-  id: number;
-
-
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+  	private route: ActivatedRoute,
+  	private _produitService: ProduitService
+  ) { }
 
   ngOnInit(): void {
-  	this.id = Number(this.route.snapshot.paramMap.get('id'));
+  	let id = this.route.snapshot.paramMap.get('id');
+  	this._produitService.getProduit(id).then(returnedProduit => {
+  		if(!returnedProduit) console.error('produit non trouvé');
+  		else this.produit = returnedProduit;
+  	})
+
   }
 
 }

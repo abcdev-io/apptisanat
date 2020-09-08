@@ -1,6 +1,8 @@
-<ul *ngIf="breadcrumbs.length >0">
-	<li *ngFor="let breadcrumb of breadcrumbs">
-		<a *ngIf="breadcrumb.url" routerLink="{{breadcrumb.url}}" routerLinkActive="active">{{breadcrumb.name}}</a>
-		<span *ngIf="!breadcrumb.url">{{breadcrumb.name}}</span>
-	</li>
-</ul>
+<div class="wrapper">
+	<ul *ngIf="breadcrumbs.length >0">
+		<li *ngFor="let breadcrumb of breadcrumbs">
+			<a *ngIf="breadcrumb.url" routerLink="{{breadcrumb.url}}" routerLinkActive="active">{{breadcrumb.name}}</a>
+			<span *ngIf="!breadcrumb.url">{{breadcrumb.name}}</span>
+		</li>
+	</ul>
+</div>

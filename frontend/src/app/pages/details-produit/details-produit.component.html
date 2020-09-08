@@ -1,3 +1,11 @@
-<img src="{{produit.thumbnailURI}}" />
 <h1>{{produit.nom}}</h1>
-<div class="prix">{{produit.prix}}€</div>
+<div class="main">
+	<div class="image">
+		<img src="{{produit.thumbnailURI}}" />
+	</div>
+	<div class="content">
+		<p class="description">{{produit.description}}</p>
+		<div class="prix">{{produit.prix}}€</div>
+		<button class="buy">Ajouter au panier</button>
+	</div>
+</div>

@@ -1,7 +1,12 @@
+
+
 header {
 	display: flex;
-	background-color: #EFEFEF;
+	background-color: #FFF;
 	padding:5px 20px;
+	width:100%;
+	max-width:1300px;
+	margin:0 auto;
 }
 header .logo{
 	width:200;
@@ -20,6 +25,8 @@ header .search input{
 	outline: none;
 	font-size:120%;
 	height:20px;
+	border: 1px solid rgba(34, 34, 34, 0.15);
+	border-right:0;
 }
 header .search button{
 	background-color: #FFF;
@@ -28,8 +35,10 @@ header .search button{
 	cursor:pointer;
 	padding-right:20px;
 	font-size:120%;
-	height:40px;
+	height:42px;
 	margin-top:10px;
+	border: 1px solid rgba(34, 34, 34, 0.15);
+	border-left:0;
 }
 header .connexion button{
 	font-weight:bold;
@@ -38,8 +47,26 @@ header .connexion button{
 	cursor:pointer;
 	padding:5px 10px;
 	border-radius:10px;
+	background-color:#FFF;
+	width: 110px;
 }
 header .connexion button:hover{
-	background-color:#FFF;
+	background-color:#EEE;
 	transition: background-color 300ms ease-in-out;
+}
+
+.main{
+	max-width:1300px;
+	margin:0 auto;	
+}
+
+footer{
+	background-color:#FDEBD2;
+	flex:1;
+}
+footer .content{
+	color:#222;
+	padding:20px 0;
+	max-width:1300px;
+	margin:0 auto;
 }

@@ -10,6 +10,7 @@ import { DetailsProduitComponent } from './pages/details-produit/details-produit
 
 
 import { BreadcrumbService } from './services/breadcrumb.service';
+import { PanierComponent } from './ui/panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BreadcrumbService } from './services/breadcrumb.service';
     ListeProduitsComponent,
     ProduitComponent,
     BreadcrumbsComponent,
-    DetailsProduitComponent
+    DetailsProduitComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+.panier{
+	margin-top:10px;
+	cursor:pointer;
+	width:60px;
+}
+.panier .nb{
+	color:#FFF;
+	font-weight:bold;
+	background-color: #C41818;
+	border-radius:10px;
+	padding:0px 5px;
+	position:relative;
+	left:-15px;
+	top:2px;
+}

@@ -1,3 +1,41 @@
+.main{
+	display:flex;
+	margin-bottom:20px;
+}
+.main > div{
+	flex:1;
+}
 img{
-	width:500px;
+	width:100%;
+}
+.content {
+	padding: 0 20px;
+}
+.content .prix{
+	font-size:150%;
+	font-weight:bold;
+}
+
+.content .buy{
+	cursor:pointer;
+	margin-top:20px;
+	color: #FFF;
+	width:100%;
+	border-radius: 24px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 18px;;
+
+    text-align: center;
+    vertical-align: middle;
+    background-color: #222;
+    outline: none;
+    border:0;
+}
+.content .buy:hover{
+	font-size:105%;
 }

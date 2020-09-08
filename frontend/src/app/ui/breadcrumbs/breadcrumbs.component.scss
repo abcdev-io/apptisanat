@@ -1,20 +1,26 @@
+.wrapper{
+background-color:#DDEBE3;
+}
 ul{
 	list-style:none;
 	padding:10px;
 	margin:0;
-	background-color:#666;
-	color:#FFF;
+	
+	color:#333;
+
+	max-width:1300px;
+	margin:0 auto;	
 }
 ul li{
 	display:inline;
 }
 ul li a {
-  color: #FFF;
+  color: #333;
   text-decoration: underline;
   font-weight: bold;
 }
 ul li+li:before {
   padding: 8px;
-  color: #FFF;
+  color: #222;
   content: "/\00a0";
 }

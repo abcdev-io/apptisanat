@@ -8,6 +8,10 @@ import {ProduitService} from '../../services/produit.service';
 import { Breadcrumb } from '../../models/breadcrumb';
 import { BreadcrumbService } from "../../services/breadcrumb.service";
 
+
+
+import { PanierService } from "../../services/panier.service";
+
 @Component({
   selector: 'app-details-produit',
   templateUrl: './details-produit.component.html',
@@ -21,7 +25,8 @@ export class DetailsProduitComponent implements OnInit {
   constructor(
   	private route: ActivatedRoute,
   	private _produitService: ProduitService,
-    private _breadcrumbService: BreadcrumbService
+    private _breadcrumbService: BreadcrumbService,
+    private _panierService: PanierService
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +44,10 @@ export class DetailsProduitComponent implements OnInit {
       }
     })
 
+  }
+
+  ajouterAuPanier() {
+    this._panierService.ajoutProduit(this.produit);
   }
 
 }

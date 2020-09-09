@@ -12,6 +12,8 @@ import { DetailsProduitComponent } from './pages/details-produit/details-produit
 import { BreadcrumbService } from './services/breadcrumb.service';
 import { PanierComponent } from './ui/panier/panier.component';
 
+import { PanierService } from './services/panier.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { PanierComponent } from './ui/panier/panier.component';
     AppRoutingModule
   ],
   providers: [
-    BreadcrumbService
+    BreadcrumbService,
+    PanierService
   ],
   bootstrap: [AppComponent]
 })

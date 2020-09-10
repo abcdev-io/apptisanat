@@ -13,6 +13,7 @@ import { BreadcrumbService } from './services/breadcrumb.service';
 import { PanierComponent } from './ui/panier/panier.component';
 
 import { PanierService } from './services/panier.service';
+import { DetailsPanierComponent } from './pages/details-panier/details-panier.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PanierService } from './services/panier.service';
     ProduitComponent,
     BreadcrumbsComponent,
     DetailsProduitComponent,
-    PanierComponent
+    PanierComponent,
+    DetailsPanierComponent
   ],
   imports: [
     BrowserModule,

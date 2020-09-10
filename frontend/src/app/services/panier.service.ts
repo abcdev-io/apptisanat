@@ -10,18 +10,16 @@ export class PanierService {
 
   public panierSource : BehaviorSubject<Panier>;
 
-  panier: Panier;
+  panier: Panier = new Panier();
 
   constructor() { 
-  	this.panier = new Panier();
   	this.panierSource = new BehaviorSubject(this.panier);
   }
 
   ajoutProduit(produit: Produit) {
   	this.panier.ajoutProduit(produit);
-
-  	console.log('ajoutProduit',this.panier);
     this.panierSource.next(this.panier);
+
   }
 
 }

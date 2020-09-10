@@ -1,0 +1,29 @@
+<div *ngIf="panier.commande.length == 0">
+Vous n'avez pas de produit dans votre panier pour le moment
+</div>
+
+<table *ngIf="panier.commande.length > 0">
+	<tr>
+		<th>Image</th>
+		<th>Produit</th>
+		<th>Quantité</th>
+		<th>Prix par article</th>
+		<th>Prix total</th>
+	</tr>
+	<tr *ngFor="let produitEtQuantite of panier.commande">
+		<td>
+			<img src="{{produitEtQuantite.produit.thumbnailURI}}" />
+		</td>
+		<td>{{produitEtQuantite.produit.nom}}</td>
+		<td>{{produitEtQuantite.quantite}}</td>
+		<td>{{produitEtQuantite.produit.prix}}€</td>
+		<td>{{produitEtQuantite.getPrixTotal()}}€</td>
+	</tr>
+	<tr class="grandTotal">
+		<td></td>
+		<td>TOTAL</td>
+		<td>{{panier.getNbProduits()}}</td>
+		<td></td>
+		<td>{{panier.getPrixTotal()}}€</td>
+	</tr>
+</table>

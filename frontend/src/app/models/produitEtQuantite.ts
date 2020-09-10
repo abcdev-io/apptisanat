@@ -9,4 +9,8 @@ export class ProduitEtQuantite{
     	this.produit = produit;
     	this.quantite = quantite;
     }
+
+    getPrixTotal():number {
+    	return this.produit.prix * this.quantite;
+    }
 }

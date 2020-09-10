@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router} from '@angular/router';
 
 import { PanierService } from "../../services/panier.service";
 import { Panier } from "../../models/panier";
@@ -12,21 +12,22 @@ import { Panier } from "../../models/panier";
 })
 export class PanierComponent implements OnInit {
   
-  nb:number = 0;
+  nbProduits:number = 0;
 
   constructor(
-  	private _panierService: PanierService
+  	private _panierService: PanierService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   	this._panierService.panierSource.subscribe(panier => {
-
-  		const reducer = (accumulator,produitEtQuantite) => { 
-  			accumulator += produitEtQuantite.quantite;
-  			return accumulator;
-  		};
-  		this.nb = panier.commande.reduce(reducer,0);
+  		this.nbProduits = panier.getNbProduits();
   	});
+  }
+
+
+  goToDetailsPanier() {
+    this.router.navigate(['/panier']);
   }
 
 }

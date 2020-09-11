@@ -1,4 +1,4 @@
 <div class="panier" (click)="goToDetailsPanier()">
 	<img src="/assets/icons/basket.png" />
-	<span class="nb" *ngIf="nbProduits">{{nbProduits}}</span>
+	<span class="nb" *ngIf="panierService.nbProduits">{{panierService.nbProduits}}</span>
 </div>

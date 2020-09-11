@@ -11,19 +11,13 @@ import { Panier } from "../../models/panier";
   styleUrls: ['./panier.component.css']
 })
 export class PanierComponent implements OnInit {
-  
-  nbProduits:number = 0;
 
   constructor(
-  	private _panierService: PanierService,
+  	public panierService: PanierService,
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-  	this._panierService.panierSource.subscribe(panier => {
-  		this.nbProduits = panier.getNbProduits();
-  	});
-  }
+  ngOnInit(): void {}
 
 
   goToDetailsPanier() {

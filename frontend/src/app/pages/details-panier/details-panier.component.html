@@ -16,14 +16,14 @@ Vous n'avez pas de produit dans votre panier pour le moment
 		</td>
 		<td>{{produitEtQuantite.produit.nom}}</td>
 		<td>{{produitEtQuantite.quantite}}</td>
-		<td>{{produitEtQuantite.produit.prix}}€</td>
-		<td>{{produitEtQuantite.getPrixTotal()}}€</td>
+		<td>{{produitEtQuantite.produit.prix | number:'1.2'}}€</td>
+		<td>{{produitEtQuantite.getPrixTotal() | number:'1.2'}}€</td>
 	</tr>
 	<tr class="grandTotal">
 		<td></td>
 		<td>TOTAL</td>
 		<td>{{panier.getNbProduits()}}</td>
 		<td></td>
-		<td>{{panier.getPrixTotal()}}€</td>
+		<td>{{panier.getPrixTotal() | number:'1.2'}}€</td>
 	</tr>
 </table>
